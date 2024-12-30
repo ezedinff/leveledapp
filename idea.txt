@@ -7,6 +7,11 @@ Core Mission:
 To level the playing field for startups and businesses by providing top-tier, affordable, and innovative digital solutions that fuel growth and success.
 
 
+Maybe you want to develop an app, maybe you need expert help with an ongoing project or maybe you are looking for a talented IT specialist to enhance your team efforts.
+
+In any scenario - we have the solution for you. We offer flexible cooperation that helps companies improve their dev process and keep the budget lower than onshore.
+
+
 services are
 Web Development
 Mobile Development
@@ -24,17 +29,13 @@ Cybersecurity strategies.
 Data management practices.
 Engineering:
 Web and mobile development.
-Real-time solutions with WebRTC.
+Real-time solutions.
 Management & Support:
 DevOps processes.
 Quality Assurance testing.
 Ongoing Project Management.
 
 
-Case Studies/Projects
-Highlighted examples with visuals and short descriptions.
-Contact CTA
-CTA: "Ready to start? Contact us now."
 
 
 
