@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Gradients -->
   <defs>
     <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#FFCD00;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#FFE066;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="taglineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1D2144;stop-opacity:0.95" />
-      <stop offset="50%" style="stop-color:#1D2144;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1D2144;stop-opacity:0.95" />
     </linearGradient>
   </defs>
 
@@ -22,21 +17,13 @@
   <circle cx="25" cy="5" r="1" fill="#FFCD00" opacity="0.4"/>
   <circle cx="35" cy="5" r="1" fill="#FFCD00" opacity="0.4"/>
 
-  <!-- Bottom Right Circuit Lines -->
-  <path d="M95 32h10m5 0h10m-20-3v3m10-3v3" 
-        stroke="#FFCD00" 
-        stroke-width="0.75" 
-        opacity="0.4"/>
-  <circle cx="105" cy="32" r="1" fill="#FFCD00" opacity="0.4"/>
-  <circle cx="115" cy="32" r="1" fill="#FFCD00" opacity="0.4"/>
-
   <!-- Right Side Circuits -->
-  <path d="M120 15h8m-4 0v5m-15-2h8" 
+  <path d="M100 15h8m-4 0v5m-15-2h8" 
         stroke="#FFCD00" 
         stroke-width="0.75" 
         opacity="0.4"/>
-  <circle cx="124" cy="15" r="1" fill="#FFCD00" opacity="0.4"/>
-  <circle cx="113" cy="18" r="1" fill="#FFCD00" opacity="0.4"/>
+  <circle cx="104" cy="15" r="1" fill="#FFCD00" opacity="0.4"/>
+  <circle cx="93" cy="18" r="1" fill="#FFCD00" opacity="0.4"/>
 
   <!-- Left Side Complex Circuit -->
   <path d="M5 15h8m2 0h5m-15 6h6m2 0h4" 
@@ -81,31 +68,22 @@
   </g>
 
   <!-- Decorative Elements -->
-  <circle cx="132" cy="10" r="3" fill="#FFCD00"/>
-  <path d="M127 8L137 8" stroke="#FFCD00" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="116" cy="6" r="3" fill="#FFCD00"/>
+  <path d="M107 6L117 6" stroke="#FFCD00" stroke-width="0.5" opacity="0.5"/>
   
   <!-- Additional Circuit Nodes -->
-  <circle cx="132" cy="20" r="1" fill="#FFCD00" opacity="0.4"/>
-  <circle cx="127" cy="25" r="1" fill="#FFCD00" opacity="0.4"/>
-  <path d="M127 20h10m-5 0v5" 
+  <circle cx="112" cy="15" r="1" fill="#FFCD00" opacity="0.4"/>
+  <circle cx="107" cy="18" r="1" fill="#FFCD00" opacity="0.4"/>
+  <path d="M107 15h10m-5 0v3" 
         stroke="#FFCD00" 
         stroke-width="0.75" 
         opacity="0.4"/>
   
   <!-- Tagline -->
-  <g transform="translate(0, 1)">
-    <text x="70" y="35" 
-          font-family="Arial, sans-serif" 
-          font-size="7.5" 
-          font-weight="600" 
-          letter-spacing="0.5"
-          text-anchor="middle"
-          fill="url(#taglineGradient)">
-      <tspan fill="#FFCD00" font-weight="700">top-tier</tspan>
-      <tspan fill="#1D2144"> • </tspan>
-      <tspan fill="#FFCD00" font-weight="700">affordable</tspan>
-      <tspan fill="#1D2144"> • </tspan>
-      <tspan fill="#FFCD00" font-weight="700">innovative</tspan>
-    </text>
-  </g>
+  <text x="60" y="36" 
+        font-family="Arial, sans-serif" 
+        font-size="6" 
+        font-weight="500" 
+        fill="#1D2144" 
+        text-anchor="middle">Top-tier • Affordable • Innovative</text>
 </svg>
