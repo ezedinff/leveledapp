@@ -3,44 +3,104 @@ import SectionTitle from "../Common/SectionTitle";
 
 const About = () => {
   return (
-    <section className="overflow-hidden pt-16 md:pt-20 lg:pt-28">
+    <section id="about" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
+        {/* First Section */}
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Empowering Your Digital Journey"
-                paragraph="Maybe you want to develop an app, maybe you need expert help with an ongoing project or maybe you are looking for a talented IT specialist to enhance your team efforts. In any scenario - we have the solution for you."
+                title="Empowering Digital Innovation"
+                paragraph="LeveledApp is a forward-thinking technology company focused on empowering startups and businesses to thrive in the digital age. We provide tailored solutions that enable businesses to grow, innovate, and achieve their goals efficiently."
                 mb="44px"
               />
 
               <div className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Expert Web Development" />
-                    <List text="Mobile App Solutions" />
-                    <List text="UI/UX Design Excellence" />
-                    <List text="Product Management" />
+                    <List text="Web Development" />
+                    <List text="Mobile Development" />
+                    <List text="Product Discovery" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Nearshore Development" />
-                    <List text="Product Discovery" />
-                    <List text="DevOps & QA" />
-                    <List text="Ongoing Support" />
+                    <List text="UI/UX Design" />
+                    <List text="Nearshore Teams" />
+                    <List text="Product Management" />
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="w-full px-4 lg:w-1/2">
               <div className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"
-                  alt="about-image"
+                  alt="LeveledApp Team"
                   fill
-                  className="mx-auto max-w-full lg:mr-0"
+                  className="mx-auto max-w-full drop-shadow-three dark:hidden lg:mr-0"
                 />
+                <Image
+                  src="/images/about/about-image-dark.svg"
+                  alt="LeveledApp Team"
+                  fill
+                  className="mx-auto hidden max-w-full drop-shadow-three dark:block lg:mr-0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Second Section */}
+        <div className="-mx-4 flex flex-wrap items-center pt-16">
+          <div className="w-full px-4 lg:w-1/2">
+            <div className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0">
+              <Image
+                src="/images/about/about-image-2.svg"
+                alt="LeveledApp Services"
+                fill
+                className="mx-auto max-w-full drop-shadow-three dark:hidden lg:mr-0"
+              />
+              <Image
+                src="/images/about/about-image-2-dark.svg"
+                alt="LeveledApp Services"
+                fill
+                className="mx-auto hidden max-w-full drop-shadow-three dark:block lg:mr-0"
+              />
+            </div>
+          </div>
+          <div className="w-full px-4 lg:w-1/2">
+            <div className="wow fadeInUp max-w-[470px]">
+              <div className="mb-9">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  Product Design & Strategy
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  Our expert team delivers cutting-edge UI/UX design, product management, and startup-focused solutions that set your business apart.
+                </p>
+              </div>
+              <div className="mb-9">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  Engineering Excellence
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  From web and mobile development to real-time solutions, we build robust, scalable applications that drive your business forward.
+                </p>
+              </div>
+              <div className="mb-9">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  Advisory Services
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  Stay ahead with our expert guidance in cybersecurity strategies and data management practices, ensuring your business remains secure and efficient.
+                </p>
+              </div>
+              <div className="mb-1">
+                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                  Management & Support
+                </h3>
+                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  Our comprehensive DevOps processes, quality assurance testing, and ongoing project management ensure smooth operations and successful delivery.
+                </p>
               </div>
             </div>
           </div>

@@ -68,36 +68,24 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <Link
-                      href="/services/web-development"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Web Development
-                    </Link>
+                    </span>
                   </li>
                   <li>
-                    <Link
-                      href="/services/mobile-development"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Mobile Development
-                    </Link>
+                    </span>
                   </li>
                   <li>
-                    <Link
-                      href="/services/nearshore-development"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Nearshore Development
-                    </Link>
+                    </span>
                   </li>
                   <li>
-                    <Link
-                      href="/services/product-discovery"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Product Discovery
-                    </Link>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -111,7 +99,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/about"
+                      href="/#about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       About Us
@@ -119,19 +107,16 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/contact"
+                      href="/#contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Contact
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/careers"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Careers
-                    </Link>
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -145,27 +130,21 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/contact"
+                      href="/#contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Get Support
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/terms"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Terms of Service
-                    </Link>
+                    </span>
                   </li>
                   <li>
-                    <Link
-                      href="/privacy"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
+                    <span className="mb-4 inline-block text-base text-body-color dark:text-body-color-dark">
                       Privacy Policy
-                    </Link>
+                    </span>
                   </li>
                 </ul>
               </div>

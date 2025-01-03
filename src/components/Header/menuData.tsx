@@ -10,31 +10,31 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Services",
-    path: "/services",
+    path: "/#services",
     newTab: false,
     submenu: [
       {
         id: 21,
         title: "Web Development",
-        path: "/services/web-development",
+        path: "/#services",
         newTab: false,
       },
       {
         id: 22,
         title: "Mobile Development",
-        path: "/services/mobile-development",
+        path: "/#services",
         newTab: false,
       },
       {
         id: 23,
         title: "Nearshore Development",
-        path: "/services/nearshore-development",
+        path: "/#services",
         newTab: false,
       },
       {
         id: 24,
         title: "Product Discovery",
-        path: "/services/product-discovery",
+        path: "/#services",
         newTab: false,
       },
     ],
@@ -42,13 +42,13 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "About",
-    path: "/about",
+    path: "/#about",
     newTab: false,
   },
   {
     id: 4,
     title: "Contact",
-    path: "/contact",
+    path: "/#contact",
     newTab: false,
   },
 ];

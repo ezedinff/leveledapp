@@ -1,22 +1,21 @@
+import { Metadata } from "next";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import { Metadata } from "next";
-
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
+  title: "About LeveledApp | Software Development Services",
+  description: "LeveledApp is a forward-thinking technology company empowering startups and businesses with web development, mobile apps, offshore teams, and product discovery services.",
 };
 
 const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="About LeveledApp"
+        description="We level the playing field for startups and businesses by providing top-tier, affordable, and innovative digital solutions that fuel growth and success."
       />
+
       <AboutSectionOne />
       <AboutSectionTwo />
     </>

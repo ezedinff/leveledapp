@@ -36,6 +36,21 @@ const Header = () => {
     }
   };
 
+  // Handle smooth scroll for hash links
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.href;
+    if (href.includes('#')) {
+      e.preventDefault();
+      const targetId = href.split('#')[1];
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+        // Close mobile menu if open
+        setNavbarOpen(false);
+      }
+    }
+  };
+
   const usePathName = usePathname();
 
   return (
@@ -110,6 +125,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            onClick={handleClick}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
@@ -159,12 +175,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/contact"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Get Started
-                </Link>
                 <div>
                   <ThemeToggler />
                 </div>
