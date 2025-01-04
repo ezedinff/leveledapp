@@ -1,10 +1,73 @@
 "use client";
 
-// import NewsLatterBox from "./NewsLatterBox";
+import { useState, useRef } from "react";
 import { useTheme } from "next-themes";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const { theme } = useTheme();
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState({ type: '', text: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setMessage({ type: '', text: '' });
+
+    try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await recaptchaRef.current?.executeAsync();
+      if (!recaptchaToken) {
+        throw new Error('reCAPTCHA verification failed');
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage({ type: 'success', text: data.message });
+        // Clear form
+        setFormData({ name: '', email: '', message: '' });
+        // Reset reCAPTCHA
+        recaptchaRef.current?.reset();
+      } else if (response.status === 429) {
+        setMessage({ type: 'error', text: 'Too many requests. Please try again later.' });
+      } else {
+        setMessage({ type: 'error', text: data.error });
+      }
+    } catch (err) {
+      setMessage({ 
+        type: 'error', 
+        text: err instanceof Error ? err.message : 'Failed to send message. Please try again.'
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
   
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
@@ -21,7 +84,16 @@ const Contact = () => {
               <p className="mb-12 text-base font-medium text-body-color">
                 Whether you need web development, mobile apps, or a dedicated team, we&apos;re here to help you succeed.
               </p>
-              <form>
+              {message.text && (
+                <div className={`mb-6 rounded-sm px-4 py-3 ${
+                  message.type === 'success' 
+                    ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' 
+                    : 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
+                }`}>
+                  {message.text}
+                </div>
+              )}
+              <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
@@ -33,7 +105,13 @@ const Contact = () => {
                       </label>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         placeholder="Enter your name"
+                        required
+                        minLength={2}
+                        maxLength={100}
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -48,7 +126,12 @@ const Contact = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="Enter your email"
+                        required
+                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                         className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -63,15 +146,30 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         rows={5}
                         placeholder="Tell us about your project"
+                        required
+                        minLength={10}
+                        maxLength={1000}
                         className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Send Message
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      size="invisible"
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                      theme={theme === 'dark' ? 'dark' : 'light'}
+                    />
+                    <button 
+                      type="submit"
+                      disabled={isLoading}
+                      className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark disabled:opacity-70"
+                    >
+                      {isLoading ? 'Sending...' : 'Send Message'}
                     </button>
                   </div>
                 </div>
@@ -113,7 +211,6 @@ const Contact = () => {
                     </defs>
                   </svg>
                 </span>
-
                 <span className="absolute right-2 top-[140px]">
                   <svg
                     width="38"
@@ -152,9 +249,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/* <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
-          </div> */}
         </div>
       </div>
     </section>
