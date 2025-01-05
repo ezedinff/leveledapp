@@ -1,36 +1,50 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import CalendarModal from "../CalendarModal";
 
 const Hero = () => {
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
+              <div
+                className="wow fadeInUp mx-auto max-w-[800px] text-center"
+                data-wow-delay=".2s"
+              >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Empowering Startups with Top-Tier Digital Solutions
+                  Empowering Your Digital Vision with Expert Software Development
                 </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  LeveledApp helps startups thrive in the digital age with expert web development, 
-                  mobile solutions, nearshore teams, and product discovery services. We level the 
-                  playing field with affordable, innovative solutions that fuel your growth.
+                <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  We transform ideas into powerful digital solutions. From web and mobile development to dedicated teams, we&apos;re your partner in building the future.
                 </p>
-                <div className="flex flex-col items-center justify-center">
-                  <a
-                    href="mailto:contact@leveledapp.com"
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                  <Link
+                    href="/#contact"
                     className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    Contact Us
-                  </a>
+                    Get Started
+                  </Link>
+                  <button
+                    onClick={() => setIsCalendarOpen(true)}
+                    className="rounded-sm bg-black/20 px-8 py-4 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
+                  >
+                    Schedule a Call
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
@@ -273,6 +287,11 @@ const Hero = () => {
           </svg>
         </div>
       </section>
+
+      <CalendarModal 
+        isOpen={isCalendarOpen} 
+        onClose={() => setIsCalendarOpen(false)} 
+      />
     </>
   );
 };
