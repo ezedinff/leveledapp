@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const AboutSectionTwo = () => {
   return (
     <section className="py-16 md:py-20 lg:py-28">
@@ -6,14 +8,18 @@ const AboutSectionTwo = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0">
               <div className="relative z-10 inline-flex items-center justify-center">
-                <img
-                  src="/images/about/about-image-2.svg"
+                <Image
+                  src="/images/about/about-image.svg"
                   alt="LeveledApp Services"
+                  width={500}
+                  height={480}
                   className="mx-auto max-w-full drop-shadow-three dark:hidden lg:mr-0"
                 />
-                <img
-                  src="/images/about/about-image-2-dark.svg"
+                <Image
+                  src="/images/about/about-image-dark.svg"
                   alt="LeveledApp Services"
+                  width={500}
+                  height={480}
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block lg:mr-0"
                 />
               </div>

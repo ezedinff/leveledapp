@@ -32,18 +32,18 @@ const About = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2">
-              <div className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[700px] lg:mr-0">
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/about/sd.svg"
                   alt="LeveledApp Team"
                   fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden lg:mr-0"
+                  className="mx-auto max-w-full scale-125 drop-shadow-three dark:hidden lg:mr-0"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/about/sd.svg"
                   alt="LeveledApp Team"
                   fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block lg:mr-0"
+                  className="mx-auto hidden max-w-full scale-125 drop-shadow-three dark:block lg:mr-0"
                 />
               </div>
             </div>
@@ -55,13 +55,13 @@ const About = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0">
               <Image
-                src="/images/about/about-image-2.svg"
+                src="/images/about/about-image.svg"
                 alt="LeveledApp Services"
                 fill
                 className="mx-auto max-w-full drop-shadow-three dark:hidden lg:mr-0"
               />
               <Image
-                src="/images/about/about-image-2-dark.svg"
+                src="/images/about/about-image-dark.svg"
                 alt="LeveledApp Services"
                 fill
                 className="mx-auto hidden max-w-full drop-shadow-three dark:block lg:mr-0"
