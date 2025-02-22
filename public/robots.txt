@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://leveledapp.com/sitemap.xml
 
 # Disallow crawling of certain paths
