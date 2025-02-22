@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1A1A1A"/>
+  
+  <!-- Decorative circuit patterns -->
+  <path d="M100 100h200m40 0h160m-400 60v40m200-40v40" 
+        stroke="#FFCD00" 
+        stroke-width="2" 
+        opacity="0.2"/>
+  
+  <!-- Logo -->
+  <g transform="translate(100, 215)">
+    <rect width="120" height="120" rx="24" fill="#FFCD00"/>
+    <path 
+      d="M30 30V90H90L60 60L90 30H30Z" 
+      fill="white"
+      stroke="white"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+  </g>
+  
+  <!-- Text -->
+  <text x="260" y="280" 
+        font-family="Arial, sans-serif" 
+        font-size="72" 
+        font-weight="bold" 
+        fill="white">LeveledApp</text>
+  
+  <!-- Tagline -->
+  <text x="260" y="350" 
+        font-family="Arial, sans-serif" 
+        font-size="36" 
+        font-weight="normal" 
+        fill="#FFCD00">Top-tier • Affordable • Innovative</text>
+        
+  <!-- Description -->
+  <text x="260" y="420" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        font-weight="normal" 
+        fill="#999999">Expert software development and consulting services</text>
+</svg> 

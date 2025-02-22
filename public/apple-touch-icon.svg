@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="45" fill="#FFCD00"/>
+  <path 
+    d="M45 45V135H135L90 90L135 45H45Z" 
+    fill="white"
+    stroke="white"
+    stroke-width="8"
+    stroke-linejoin="round"
+  />
+</svg> 
