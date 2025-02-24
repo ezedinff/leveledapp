@@ -8,10 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/contact',
-    '/services',
-    '/blog',
-    '/terms',
-    '/privacy',
+    '/services'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
