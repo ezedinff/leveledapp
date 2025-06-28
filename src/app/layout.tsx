@@ -10,7 +10,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://leveledapp.com'),
+  metadataBase: new URL('https://www.leveledapp.com'),
   title: {
     default: 'LeveledApp - Software Development Services',
     template: '%s | LeveledApp'
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'LeveledApp - Software Development Services',
     description: 'Empowering startups with top-tier, affordable digital solutions. Expert web & mobile development, nearshore teams, and product discovery services.',
-    url: 'https://leveledapp.com',
+    url: 'https://www.leveledapp.com',
     siteName: 'LeveledApp',
     images: [
       {
@@ -137,10 +137,10 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "LeveledApp",
-                "url": "https://leveledapp.com",
+                "url": "https://www.leveledapp.com",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://leveledapp.com/images/logo.png",
+                  "url": "https://www.leveledapp.com/images/logo.png",
                   "width": "512",
                   "height": "512"
                 },
@@ -166,10 +166,10 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "LeveledApp",
-                "url": "https://leveledapp.com",
+                "url": "https://www.leveledapp.com",
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": "https://leveledapp.com/search?q={search_term_string}",
+                  "target": "https://www.leveledapp.com/search?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               },
