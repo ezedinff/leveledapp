@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.leveledapp.com/$1",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "leveledapp.com"
+        }
+      ]
+    }
+  ]
+}
